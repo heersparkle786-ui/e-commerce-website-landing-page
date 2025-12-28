@@ -1,0 +1,133 @@
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== Body ===== */
+body {
+    background-color: #ffffff;
+    color: #222;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    width: 100%;
+    padding: 20px 40px;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.nav-links li:hover {
+    text-decoration: underline;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    width: 100%;
+    height: 400px;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero-text button {
+    padding: 12px 30px;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.hero-text button:hover {
+    background-color: #333333;
+}
+
+/* ===== Products Section ===== */
+.products {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.product-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 200px;
+    padding: 40px 20px;
+    background-color: #e0e0e0;
+    font-size: 16px;
+}
+
+/* ===== Footer ===== */
+.footer {
+    padding: 20px;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-text h2 {
+        font-size: 28px;
+    }
+
+    .product-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
