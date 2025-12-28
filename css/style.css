@@ -643,12 +643,10 @@ img {
     color: var(--gray-medium);
     transition: all 0.3s ease;
 }
-
 .footer-links li a:hover {
     color: var(--white);
     padding-left: 5px;
 }
-
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: var(--space-lg);
@@ -656,3 +654,4 @@ img {
     color: var(--gray-medium);
     font-size: 0.9rem;
 }
+
