@@ -2,53 +2,261 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>E-Commerce Landing Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- CSS File -->
+    <title>E-commerce Website | Fashion Store</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-
-    <!-- Navbar -->
-    <header class="navbar">
-        <h1 class="logo">Shop</h1>
-        <nav>
-            <ul class="nav-links">
-                <li>Home</li>
-                <li>Products</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">ECOMMERCE</a>
+                </div>
+                
+                <div class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="#" class="active">Home</a></li>
+                        <li class="dropdown">
+                            <a href="#">Shop <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">All Category</a></li>
+                                <li><a href="#">Men</a></li>
+                                <li><a href="#">Women</a></li>
+                                <li><a href="#">Kids</a></li>
+                                <li><a href="#">Accessories</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-actions">
+                    <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
+                    <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
+                    <a href="#" class="nav-icon cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-text">
-            <h2>Discover Your Style</h2>
-            <p>Best products at the best price</p>
-            <button>Shop Now</button>
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Discover Your Perfect Style</h1>
+                    <p class="hero-subtitle">Elevate your wardrobe with premium fashion pieces curated just for you.</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary">Shop Now</a>
+                        <a href="#" class="btn btn-outline">Explore Collection</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/hero-fashion.jpg" alt="Fashion Model">
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section class="products">
-        <h2>Featured Products</h2>
-        <div class="product-cards">
-            <div class="card">Product 1</div>
-            <div class="card">Product 2</div>
-            <div class="card">Product 3</div>
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Shop By Category</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="assets/images/casual.jpg" alt="Casual Wear">
+                    </div>
+                    <h3>Casual Comfort</h3>
+                    <p>Everyday essentials for relaxed style</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="assets/images/summer.jpg" alt="Summer Outfit">
+                    </div>
+                    <h3>Summer Outfit</h3>
+                    <p>Light and breezy seasonal collection</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="assets/images/outdoor.jpg" alt="Outdoor Active">
+                    </div>
+                    <h3>Outdoor Active</h3>
+                    <p>Performance wear for your adventures</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="assets/images/trending.jpg" alt="Trending">
+                    </div>
+                    <h3>Trending Now</h3>
+                    <p>Latest fashion picks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why You'll Love to Shop on Our Website</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Take Care with Love</h3>
+                    <p>We carefully select each item to ensure quality and style that you'll love wearing every day.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Friendly Customer Service</h3>
+                    <p>Our support team is available 24/7 to help with any questions or concerns about your order.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-undo-alt"></i>
+                    </div>
+                    <h3>Easy Refund Process</h3>
+                    <p>Not satisfied? Our hassle-free return policy ensures you get your refund within 7 days.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">From The Blog</h2>
+                <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/images/blog-fashion.jpg" alt="Fashion Tips">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Fashion Tips</span>
+                        <h3>How to Combine Your Daily Outfit to Look Fresh and Cool</h3>
+                        <p>Discover expert tips on creating stylish everyday outfits that keep you looking fresh and confident throughout the day.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="assets/images/blog-summer.jpg" alt="Summer Fashion">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-category">Seasonal Guide</span>
+                        <h3>Summer 2024 Fashion Trends You Need to Know</h3>
+                        <p>Stay ahead of the fashion curve with our comprehensive guide to this summer's hottest trends and must-have pieces.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated with Latest Trends</h2>
+                <p>Subscribe to our newsletter and get 15% off your first order</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>© 2025 All Rights Reserved</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-logo">ECOMMERCE</h3>
+                    <p class="footer-description">
+                        Your premier destination for fashion and style. We offer quality products with excellent customer service.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Popular</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Kids</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Track Your Order</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ECOMMERCE. All rights reserved. Designed with passion for fashion.</p>
+            </div>
+        </div>
     </footer>
 
-    <!-- JS File -->
+    <!-- JavaScript -->
     <script src="js/main.js"></script>
-
 </body>
 </html>
