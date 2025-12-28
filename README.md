@@ -1,14 +1,21 @@
-# E-Commerce Website Landing Page
+# E-commerce Website Project
 
-This project is developed by following the provided project instructions and UI design reference.
+## Project Overview
+A fully responsive e-commerce website built from a Figma design with pixel-perfect accuracy.
+
+## Features
+- Modern, clean design
+- Fully responsive (mobile, tablet, desktop)
+- Interactive components
+- Newsletter subscription
+- Shopping cart functionality
+- Blog section
 
 ## Technologies Used
 - HTML5
-- CSS3
-- JavaScript
+- CSS3 (Flexbox, Grid, CSS Variables)
+- JavaScript (ES6+)
+- Font Awesome Icons
+- Google Fonts
 
-## Project Objective
-To implement a pixel-perfect user interface based on the provided design instructions.
-
-## Status
-Project in progress.
+## Project Structure
