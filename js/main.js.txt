@@ -1,100 +1,39 @@
-// Mobile Menu Toggle
+// Mobile Menu Toggle for Category Menu
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const navMenu = document.querySelector('.nav-menu');
+const categoryMenu = document.querySelector('.category-menu');
 
-if (mobileMenuBtn) {
+if (mobileMenuBtn && categoryMenu) {
     mobileMenuBtn.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
-            ? '<i class="fas fa-times"></i>' 
-            : '<i class="fas fa-bars"></i>';
+        categoryMenu.classList.toggle('active');
     });
 }
 
-// Close mobile menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-        navMenu.classList.remove('active');
-        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-    }
-});
+// Search functionality
+const searchBtn = document.querySelector('.search-btn');
+const searchInput = document.querySelector('.search-input');
 
-// Newsletter Form Submission
-const newsletterForm = document.querySelector('.newsletter-form');
-if (newsletterForm) {
-    newsletterForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const emailInput = newsletterForm.querySelector('input[type="email"]');
-        const email = emailInput.value.trim();
-        
-        if (email) {
-            // Simulate form submission
-            alert(`Thank you for subscribing with: ${email}`);
-            emailInput.value = '';
-        } else {
-            alert('Please enter a valid email address.');
+if (searchBtn && searchInput) {
+    searchBtn.addEventListener('click', () => {
+        if (searchInput.value.trim()) {
+            alert(`Searching for: ${searchInput.value}`);
+            searchInput.value = '';
+        }
+    });
+    
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            if (searchInput.value.trim()) {
+                alert(`Searching for: ${searchInput.value}`);
+                searchInput.value = '';
+            }
         }
     });
 }
 
-// Add to Cart Functionality (Example)
-const addToCartButtons = document.querySelectorAll('.add-to-cart');
-const cartCount = document.querySelector('.cart-count');
-
-if (addToCartButtons.length > 0) {
-    addToCartButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Update cart count
-            let currentCount = parseInt(cartCount.textContent);
-            cartCount.textContent = currentCount + 1;
-            
-            // Visual feedback
-            button.textContent = 'Added to Cart!';
-            button.style.backgroundColor = '#10b981';
-            button.disabled = true;
-            
-            setTimeout(() => {
-                button.textContent = 'Add to Cart';
-                button.style.backgroundColor = '';
-                button.disabled = false;
-            }, 2000);
-        });
+// Category dropdown
+const allCategory = document.querySelector('.category-item:first-child');
+if (allCategory) {
+    allCategory.addEventListener('click', () => {
+        alert('Opening category dropdown');
     });
 }
-
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 80,
-                behavior: 'smooth'
-            });
-            
-            // Close mobile menu if open
-            navMenu.classList.remove('active');
-            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-        }
-    });
-});
-
-// Sticky header on scroll
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('.header');
-    if (window.scrollY > 100) {
-        header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
-    } else {
-        header.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.05)';
-    }
-});
-
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('E-commerce website loaded successfully!');
-});
