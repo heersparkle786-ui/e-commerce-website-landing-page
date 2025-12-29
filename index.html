@@ -6,65 +6,94 @@
     <title>E-commerce Website | Fashion Store</title>
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <!-- Header & Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <a href="index.html">ECOMMERCE</a>
-                </div>
-                
-                <div class="nav-menu">
-                    <ul class="nav-links">
-                        <li><a href="#" class="active">Home</a></li>
-                        <li class="dropdown">
-                            <a href="#">Shop <i class="fas fa-chevron-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">All Category</a></li>
-                                <li><a href="#">Men</a></li>
-                                <li><a href="#">Women</a></li>
-                                <li><a href="#">Kids</a></li>
-                                <li><a href="#">Accessories</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-                
-                <div class="nav-actions">
-                    <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
-                    <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
-                    <a href="#" class="nav-icon cart-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count">3</span>
-                    </a>
-                    <button class="mobile-menu-btn">
-                        <i class="fas fa-bars"></i>
+   <!-- Top Bar -->
+<div class="top-bar">
+    <div class="container">
+        <div class="top-bar-content">
+            <div class="top-left">
+                <span class="lang-currency">
+                    <span class="english">English</span>
+                    <span class="dollar">Dollar</span>
+                </span>
+            </div>
+            <div class="top-right">
+                <a href="#">Tracking Package</a>
+                <a href="#">FAQ</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Navigation -->
+<header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">ECOMMERCE</a>
+            </div>
+            
+            <div class="search-category">
+                <!-- Search Box -->
+                <div class="search-box">
+                    <input type="text" placeholder="Search here" class="search-input">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
                     </button>
                 </div>
-            </nav>
-        </div>
-    </header>
+                
+                <!-- Category Menu -->
+                <div class="category-menu">
+                    <div class="category-item">
+                        <span>All Category</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="category-item">
+                        <span>Gift Cards</span>
+                    </div>
+                    <div class="category-item">
+                        <span>Special Event</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Icons -->
+            <div class="nav-icons">
+                <a href="#" class="icon-btn">
+                    <i class="far fa-heart"></i>
+                </a>
+                <a href="#" class="icon-btn">
+                    <i class="far fa-user"></i>
+                </a>
+                <a href="#" class="icon-btn cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </div>
+</header>
 
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">Discover Your Perfect Style</h1>
-                    <p class="hero-subtitle">Elevate your wardrobe with premium fashion pieces curated just for you.</p>
+                    <h1>Discover Your Perfect Style</h1>
+                    <p>Elevate your wardrobe with premium fashion pieces curated just for you.</p>
                     <div class="hero-buttons">
                         <a href="#" class="btn btn-primary">Shop Now</a>
                         <a href="#" class="btn btn-outline">Explore Collection</a>
@@ -80,22 +109,13 @@
     <!-- Categories Section -->
     <section class="categories-section">
         <div class="container">
-            <h2 class="section-title">Shop By Category</h2>
-            <div class="categories-grid">
+            <div class="categories-content">
                 <div class="category-card">
                     <div class="category-image">
-                        <img src="assets/images/casual-comfort.png" alt="Casual Wear">
+                        <img src="assets/images/casual-comfort.png" alt="Casual Comfort">
                     </div>
                     <h3>Casual Comfort</h3>
                     <p>Everyday essentials for relaxed style</p>
-                </div>
-                
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="assets/images/nevergetold.png" alt="Summer Outfit">
-                    </div>
-                    <h3>Summer Outfit</h3>
-                    <p>Light and breezy seasonal collection</p>
                 </div>
                 
                 <div class="category-card">
@@ -105,43 +125,88 @@
                     <h3>Outdoor Active</h3>
                     <p>Performance wear for your adventures</p>
                 </div>
-                
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="assets/images/trending.png" alt="Trending">
+            </div>
+        </div>
+    </section>
+
+    <!-- Tending Products -->
+    <section class="tending-section">
+        <div class="container">
+            <h2 class="section-title">Tending</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/shoe1.png" alt="Casual Shoe">
                     </div>
-                    <h3>Trending Now</h3>
-                    <p>Latest fashion picks</p>
+                    <h3>Casual Shoe</h3>
+                    <p class="price">$235</p>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/shoe1.png" alt="Skateboard Shoe">
+                    </div>
+                    <h3>Skateboard Shoe</h3>
+                    <p class="price">$255</p>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/shoe1.png" alt="Skateboard Shoe">
+                    </div>
+                    <h3>Skateboard Shoe</h3>
+                    <p class="price">$155</p>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/shoe2.png" alt="Backpack Shoe">
+                    </div>
+                    <h3>Backpack Shoe</h3>
+                    <p class="price">$135</p>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/shoe2.png" alt="Backpack Shoe">
+                    </div>
+                    <h3>Backpack Shoe</h3>
+                    <p class="price">$135</p>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/shoe2.png" alt="Sportwear Shoe">
+                    </div>
+                    <h3>Sportwear Shoe</h3>
+                    <p class="price">$155</p>
+                    <button class="add-to-cart">Add to cart</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features-section">
+    <!-- Services Section -->
+    <section class="services-section">
         <div class="container">
             <h2 class="section-title">Why You'll Love to Shop on Our Website</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Take Care with Love</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Take care with love</h3>
                     <p>We carefully select each item to ensure quality and style that you'll love wearing every day.</p>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
+                <div class="service-card">
                     <h3>Friendly Customer Service</h3>
                     <p>Our support team is available 24/7 to help with any questions or concerns about your order.</p>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-undo-alt"></i>
-                    </div>
+                <div class="service-card">
                     <h3>Easy Refund Process</h3>
                     <p>Not satisfied? Our hassle-free return policy ensures you get your refund within 7 days.</p>
                 </div>
@@ -152,49 +217,16 @@
     <!-- Blog Section -->
     <section class="blog-section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">From The Blog</h2>
-                <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="assets/images/fashiontips.phng.png" alt="Fashion Tips">
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-category">Fashion Tips</span>
-                        <h3>How to Combine Your Daily Outfit to Look Fresh and Cool</h3>
-                        <p>Discover expert tips on creating stylish everyday outfits that keep you looking fresh and confident throughout the day.</p>
-                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-                
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="assets/images/midsection.png" alt="Summer Fashion">
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-category">Seasonal Guide</span>
-                        <h3>Summer 2024 Fashion Trends You Need to Know</h3>
-                        <p>Stay ahead of the fashion curve with our comprehensive guide to this summer's hottest trends and must-have pieces.</p>
-                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-        <div class="container">
-            <div class="newsletter-content">
-                <h2>Stay Updated with Latest Trends</h2>
-                <p>Subscribe to our newsletter and get 15% off your first order</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Enter your email address" required>
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
-                </form>
+            <h2 class="section-title">From The Blog</h2>
+            <div class="blog-content">
+                <div class="blog-image">
+                    <img src="assets/images/blog.png" alt="Blog Image">
+                </div>
+                <div class="blog-text">
+                    <h3>How to combine your daily outfit to looks fresh and cool.</h3>
+                    <p>Maybe you don't need to buy new clothes to have nice, cool, fresh looking outfit everyday. Maybe what you need is to combine your clothes collections. Mix and match is the key.</p>
+                    <a href="#" class="read-more-btn">READ MORE</a>
+                </div>
             </div>
         </div>
     </section>
@@ -202,56 +234,56 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
+            <div class="footer-content">
+                <div class="footer-left">
                     <h3 class="footer-logo">ECOMMERCE</h3>
                     <p class="footer-description">
-                        Your premier destination for fashion and style. We offer quality products with excellent customer service.
+                        Economics is at the UK of Kent Preparator that you can tell for your personal or commercial project.
                     </p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Type your email address" required>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                
+                <div class="footer-right">
+                    <div class="footer-column">
+                        <h4>POPULAR</h4>
+                        <ul>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">T-Shirt</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">Hat</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
                     </div>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Popular</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Men</a></li>
-                        <li><a href="#">Women</a></li>
-                        <li><a href="#">Kids</a></li>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">New Arrivals</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Customer Service</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Shipping Policy</a></li>
-                        <li><a href="#">Returns & Exchanges</a></li>
-                        <li><a href="#">Track Your Order</a></li>
-                        <li><a href="#">Size Guide</a></li>
-                    </ul>
+                    
+                    <div class="footer-column">
+                        <h4>MENU</h4>
+                        <ul>
+                            <li><a href="#">All Category</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                            <li><a href="#">Special Events</a></li>
+                            <li><a href="#">Testimonial</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>OTHER</h4>
+                        <ul>
+                            <li><a href="#">Tracking Package</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Terms and Conditions</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 ECOMMERCE. All rights reserved. Designed with passion for fashion.</p>
+                <p>&copy; 2024 ECOMMERCE. All rights reserved.</p>
             </div>
         </div>
     </footer>
