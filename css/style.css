@@ -1,4 +1,3 @@
-/* ===== CSS Reset & Base Styles ===== */
 * {
     margin: 0;
     padding: 0;
@@ -452,8 +451,10 @@ img {
 .nav-icons a {
     color: var(--text-dark);
     font-size: 18px;
-}
-/* ===== HERO SECTION FIXED ===== */
+}'
+
+
+/* ===== HERO SECTION ===== */
 .hero-section {
     padding: 40px 0;
 }
@@ -561,6 +562,7 @@ img {
     color: #121212;
     margin: 0;
 }
+
 /* Bottom Casual Inspirations Section */
 .casual-inspiration-section {
     display: flex;
@@ -1865,7 +1867,7 @@ img {
 
 
 
-/* ========== FIXED SERVICES SECTION ========== */
+/* ========== SERVICES SECTION ========== */
 .services-section {
     padding: 80px 0;
     width: 100%;
@@ -2015,5 +2017,101 @@ img {
     
     .blog-text-wrapper p {
         font-size: 14px;
+    }
+}
+
+
+
+/* Hero Main Title Line Formatting */
+.hero-text-overlay h1.summer-title {
+    display: block;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 0.85;
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.hero-text-overlay h1.summer-title br {
+    display: block;
+    content: "";
+    margin-bottom: 5px;
+}
+
+/* Small Cards Text Fix */
+.small-card {
+    position: relative;
+}
+
+.small-card .card-text-overlay {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 2;
+    width: auto;
+}
+
+.card-text-overlay h3 {
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: -1.5px;
+    color: #121212;
+    margin: 0;
+    line-height: 0.85;
+    display: block;
+}
+
+.card-text-overlay h3 br {
+    display: block;
+    content: "";
+    margin-bottom: 3px;
+}
+
+/* Add background overlay for text visibility */
+.card-text-overlay::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+    border-radius: 4px;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+    .hero-text-overlay h1.summer-title {
+        font-size: 36px;
+    }
+    
+    .card-text-overlay h3 {
+        font-size: 24px;
+    }
+    
+    .small-card .card-text-overlay {
+        top: 20px;
+        left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text-overlay h1.summer-title {
+        font-size: 28px;
+        line-height: 0.9;
+    }
+    
+    .card-text-overlay h3 {
+        font-size: 20px;
+        line-height: 0.9;
+    }
+    
+    .small-card .card-text-overlay {
+        top: 15px;
+        left: 15px;
     }
 }
